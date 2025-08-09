@@ -2,6 +2,11 @@ body {
     background-color: #6C8C71;
 }
 
+.header p {
+    text-align: center;
+    margin-top: 30px;
+}
+
 .header {
     background-color: #1E4033;
     text-align: center;
@@ -51,22 +56,4 @@ a.position-absolute i:hover {
     object-fit: cover;
     margin-top: 10%;
 }
-
-
-.carousel,
-.card,
-.carousel-inner,
-.carousel-item,
-.carousel img {
-    box-shadow: none;
-    background: none;
-}
-
-.imagen-energia,
-.contenido-img {
-    box-shadow: none;
-    border-radius: 0;
-    background: transparent;
-}
-
 
