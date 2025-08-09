@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Cerrejón - Historia e Impacto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+
+    <main class="banner">El Cerrejón - Historia e Impacto</main>
+
+    <div class="main-content">
+        <section class="seccion">
+            <h2>Historia de El Cerrejón</h2>
+            <p>
+                El Cerrejón es una de las minas de carbón a cielo abierto más grandes del mundo, ubicada en La Guajira, Colombia.
+                Su explotación ha sido clave en la economía del país, pero también ha generado debates sobre su impacto ambiental
+                y social en comunidades como la Wayuú.
+            </p>
+        </section>
+
+        <section class="seccion">
+            <h2>Calculadora de Emisiones de CO₂</h2>
+            <p>Simula cuánto CO₂ se dejaría de emitir si reemplazamos energía generada con carbón por energía renovable.</p>
+
+            <form id="calcForm" class="calc-form">
+                <label for="energia">Cantidad de energía (GWh):</label>
+                <input type="number" id="energia" placeholder="Ej. 100" required>
+
+                <label for="fuenteActual">Fuente actual:</label>
+                <select id="fuenteActual">
+                    <option value="820">Carbón (Cerrejón)</option>
+                </select>
+
+                <label for="fuenteRenovable">Fuente renovable:</label>
+                <select id="fuenteRenovable">
+                    <option value="50">Solar</option>
+                    <option value="10">Eólica</option>
+                </select>
+
+                <button type="submit">Calcular</button>
+            </form>
+            <div id="resultados" class="resultados"></div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>Creado por Samuel B - Bootcamp TalentoTech 2 - 2025</p>
+    </footer>
+
+    <script>
+    document.getElementById('calcForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        const energia = parseFloat(document.getElementById('energia').value);
+        const factorActual = parseFloat(document.getElementById('fuenteActual').value);
+        const factorRenovable = parseFloat(document.getElementById('fuenteRenovable').value);
+
+        const emisionesActual = energia * factorActual;
+        const emisionesRenovable = energia * factorRenovable;
+        const diferencia = emisionesActual - emisionesRenovable;
+        const arboles = diferencia * 1000 / 21;
+
+        document.getElementById('resultados').innerHTML = `
+            <p>🌋 Emisiones con fuente actual: <strong>${emisionesActual.toLocaleString()}</strong> ton CO₂</p>
+            <p>☀️ Emisiones con renovable: <strong>${emisionesRenovable.toLocaleString()}</strong> ton CO₂</p>
+            <p>💨 <strong>Emisiones evitadas:</strong> ${diferencia.toLocaleString()} ton CO₂</p>
+            <p>🌳 Equivale a plantar aproximadamente <strong>${Math.round(arboles).toLocaleString()}</strong> árboles</p>
+        `;
+    });
+    </script>
+
+</body>
+</html>
