@@ -45,14 +45,14 @@ const datosEncuesta = [
       { opcion: "Sistema de Desalinización Sostenible", porcentaje: 90 },
       { opcion: "Programa para Proyectos de agua potable", porcentaje: 50 },
       { opcion: "Humedales Artificiales para tratamiento de aguas residuales", porcentaje: 70 },
-      { opcion: "Campañas de Uso Racionak del agua", porcentaje: 30 }
+      { opcion: "Campañas de Uso Racional del agua", porcentaje: 30 }
     ]
   },
 
     {
     pregunta: "ZONA RESIDENCIAL",
     opciones: [
-      { opcion: "Minimizar residups em la comunidad", porcentaje: 35 },
+      { opcion: "Minimizar residuos em la comunidad", porcentaje: 35 },
       { opcion: "Programa de residentes en Conversacion Costera", porcentaje: 65 },
       { opcion: "Urbanismo Ecologico Integrado", porcentaje: 93 },
       { opcion: "Ordenamiento en Zonas de alto Riesgo", porcentaje: 55 }
