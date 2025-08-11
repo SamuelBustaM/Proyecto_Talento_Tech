@@ -14,19 +14,21 @@ main {
 }
 
 .back-arrow {
-    font-size: 2rem; /* Tamaño más grande */
-    color: white; /* Mantener el color */
-    text-decoration: none; /* Quitar subrayado */
+    background: none;
+    border: none;
+    font-size: 2rem; /* tamaño igual al fs-2 de Bootstrap */
+    color: white;
     position: absolute;
-    top: 20px; /* Ajusta la posición vertical */
-    left: 20px; /* Ajusta la posición horizontal */
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .back-arrow:hover {
-    color: #6C8C71; /* Color al pasar el mouse */
+    color: #ddd;
+    transform: scale(1.2); /* zoom al pasar el mouse */
 }
-
 
 .banner { 
     width: 100%;
