@@ -1,5 +1,5 @@
 body {
-    background-color: #6C8C71;
+    background-color: #B0D9CA;
     color: #333;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,12 +13,17 @@ main {
      position: relative;
 }
 
+.lead {
+    background-color: #1E4033;
+    color: white; 
+}
+
 .back-arrow {
     background: none;
     border: none;
-    font-size: 2rem; /* tamaño igual al fs-2 de Bootstrap */
+    font-size: 2rem; 
     color: white;
-    position: absolute;
+    position: fixed;
     top: 15px;
     left: 15px;
     cursor: pointer;
@@ -27,7 +32,7 @@ main {
 
 .back-arrow:hover {
     color: #ddd;
-    transform: scale(1.2); /* zoom al pasar el mouse */
+    transform: scale(1.2); 
 }
 
 .banner { 
@@ -45,15 +50,17 @@ main {
     font-weight: bold;
 }
 .header h1 {
-    background-color: #6C8C71;
+    background-color: #6C8C71 ;
     color: white;
     padding: 18px 0;
     text-align: center;
     margin-bottom: 0.1rem;
     font-weight: 700;
     font-size: 4.5rem;
-    
-   
+}
+
+.header p {
+    color: white;
 }
 
 .header h2 {
