@@ -56,3 +56,25 @@ a.position-absolute i:hover {
     margin-top: 10%;
 }
 
+.titulo-principal {
+    background: linear-gradient(45deg, #6C8C71, #4CAF50);
+    padding: 18px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: white;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
