@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Encuesta</title>
+<style>
+
+    body{
+        font-family: Arial, sans-serif;
+        background-color: #A67A60;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        
+    }
+
+    .header{
+        background-color: #734226;
+        color: white;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+        background-color: #734226;
+
+
+    }
+
+    .form-container { 
+        flex: 1;
+        padding: 20px;
+        max-width: 600px;
+        background-color: white;
+        border-radius: 8px;
+        margin:20px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    }
+
+    fieldset{
+        border: 2px solid #A66946;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+
+    }
+
+    form fieldset legend {
+        display: block;
+        font-weight: bold;
+        color: #A66946;
+    }
+
+.radio-group {
+    display: block;
+    margin-bottom: 5px
+
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid #999;
+        font-size: 0.8;
+
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    margin-bottom: 5px;
+    
+      
+    }
+
+    button[type="submit"]{
+             display: inline-block;
+            background: linear-gradient(45deg, #A67A60, #8C593B);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    button[type="submit"]:hover{
+        background-color: rgba(27, 103, 183, 0.4);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer {
+        background-color: #734226;
+        color: white;
+        text-align: center;
+        font-size: 1.2em;
+    }
+</style>
+</head>
+<body>
+    <header class="header">
+        <h1>ENCUESTA DE INTERES</h1>
+        
+    </header>
+
+    <a href="index.html" class="btn p-0 position-absolute top-0 start-0 m-3" style="background: none; border: none;">
+        <i class="bi bi-arrow-left-circle fs-2 text-white"></i>
+    </a>
+
+    <main class="form-container">
+        <form action="https://formspree.io/f/mzzvrzrv" method="POST">
+            <!-- GRUPO DE INFORMACION PERSONAL -->
+             <fieldset>
+                <legend>Informacion Personal</legend>
+
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" name="name" required placeholder="Ingrse su nombre completo">
+                
+                <label for="email">Correo electronico:</label>
+                <input type="email" id="email" name="email" required placeholder="Ingrese su correo electronico">
+
+                <label for="Location" >Ubicacion (Ciudad/Postal)</label>
+                <input type="text" id="Location" name="Location" required placeholder="Ingrese su ubicacion">
+
+             </fieldset>
+
+            <!-- GRUPO de El Cerrejón -->
+             <fieldset>
+                <legend>Interes en El Cerrejón</legend>
+
+                <label for="energy_source">  ¿Qué opinas sobre el impacto ambiental que genera?</label>
+                <select name="energy_source" id="energy_source" required>
+                    <option value="">Seleccione una opcion:</option>
+                    <option value="electricidad">Es negativo, causa daño a la biodiversidad y el medio ambiente.</option>
+                    <option value="gas">Es positivo, ya que contribuye al desarrollo económico.</option>
+                    <option value="solar">No estoy seguro/a, estoy en un punto medio.</option>
+                    <option value="otra">Otra</option>
+
+                </select>
+
+                <label for="energy_source"> ¿Qué efectos crees que tiene en el cambio climático global? </label>
+                <select name="energy_source" id="energy_source" required>
+                    <option value="">Seleccione una opcion:</option>
+                    <option value="electricidad">Contribuye significativamente al cambio climático.</option>
+                    <option value="gas">Tiene un impacto mínimo.</option>
+                    <option value="solar">No tiene relación con el cambio climático.</option>
+                    <option value="otra">Otra</option>
+
+                </select> 
+
+                <label for="energy_source">¿Cómo percibes el impacto social en las comunidad Wayuú? </label>
+                <select name="energy_source" id="energy_source" required>
+                    <option value="">Seleccione una opcion:</option>
+                    <option value="electricidad">Ha traído más perjuicios que beneficios.</option>
+                    <option value="gas">Ha traído más beneficios que perjuicios.</option>
+                    <option value="solar">El impacto ha sido equilibrado</option>
+                    <option value="otra">Otra</option>
+
+                </select>
+
+                <label for="energy_source"> ¿Consideras que es un motor económico para La Guajira? </label>
+                <select name="energy_source" id="energy_source" required>
+                    <option value="">Seleccione una opcion:</option>
+                    <option value="electricidad">No, la economía local no depende tanto de la minería.</option>
+                    <option value="gas">Más o menos, tiene un impacto moderado.</option>
+                    <option value="solar">Sí, es esencial para el desarrollo económico de la región.</option>
+                    <option value="otra">Otra</option>
+
+                </select>
+
+                <label for="energy_source">¿Cómo ves el futuro de la minería de carbón en La Guajira? </label>
+                <select name="energy_source" id="energy_source" required>
+                    <option value="">Seleccione una opcion:</option>
+                    <option value="electricidad">Debería transitarse hacia fuentes de energía más limpias.</option>
+                    <option value="gas">Debería continuar para garantizar el empleo y la economía regional.</option>
+                    <option value="solar">El carbón debería dejarse de explotar por completo por razones ambientales.</option>
+                    <option value="solar">No estoy seguro/a.</option>
+                    <option value="otra">Otra</option>
+
+                </select>
+
+
+
+            </fieldset>
+
+            <!-- GRUPO INTERÉS EN ENERGIAS RENOVABLES -->
+
+            <fieldset>
+                <legend>Interés en Energias Renovables</legend>
+                
+                <label class="radio-group">1. ¿Crees que las energías solar y eólica podrían reemplazar la minería a cielo abierto? </label>
+                <input type="radio" name="reemplazo_minera" value="sí" required> Sí
+                <input type="radio" name="reemplazo_minera" value="no"> No
+                <input type="radio" name="reemplazo_minera" value="no_sé"> No estoy seguro/a 
+
+                <label class="radio-group">2. ¿Estarías dispuesto/a a apoyar proyectos de energía renovable en tu comunidad?</label>
+                <input type="radio" name="reemplazo_minera" value="sí" required> Sí
+                <input type="radio" name="reemplazo_minera" value="no"> No
+
+                <label class="radio-group">3. ¿Estarías dispuesto/a a apoyar proyectos de energía renovable en tu comunidad?</label>
+                <input type="radio" name="reemplazo_minera" value="sí" required> Sí
+                <input type="radio" name="reemplazo_minera" value="no"> No
+
+                <label class="radio-group">4. ¿Estarías dispuesto/a a apoyar proyectos de energía renovable en tu comunidad?</label>
+                <input type="radio" name="reemplazo_minera" value="sí" required> Sí
+                <input type="radio" name="reemplazo_minera" value="no"> No
+
+                <label class="radio-group">5. ¿Qué obstáculos crees que existen para implementar energías renovables en regiones mineras?</label>
+                <textarea name="obstaculos" placeholder="Escribe tu opinión aquí..."></textarea>
+
+
+                
+            </fieldset>
+                
+
+            <button type="submit">Enviar Encuesta</button>
+
+
+        </form>
+
+
+    </main>
+    <footer class="footer">
+        <p>Gracias por apoyar la encuesta y dejarnos saber tu opinion al respecto.</p>
+    </footer>
+
+    
+    
+</body>
+</html>
