@@ -290,7 +290,7 @@ main {
     border-radius: 8px;
 }
 
-.footer {
+footer {
     background:#1E4033  ;
     color: white;
     text-align: center;
@@ -302,21 +302,25 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
+    background-color: #627d71;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 10px;
 }
 
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: #6C8C71 ;
+    color: #ffffff;
 }
 
 .footer-section p, .footer-section a {
-    color: #bdc3c7;
+    color: #e5e9eb;
     text-decoration: none;
     line-height: 1.8;
 }
 
 .footer-section a:hover {
-    color:  #6C8C71;
+    color:  #b2cbb6;
 }
 
 .correo {
